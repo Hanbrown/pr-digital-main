@@ -1,0 +1,314 @@
+/*
+Theme Name: PR Digital Main
+Theme URI: http://underscores.me/
+Author: Pranav Rao
+Author URI: http://www.vanarp.com
+Description: The theme for PR Digital's Website
+Version: 1.3.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: prdigital
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+PR Digital Main is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Version 2.2 (1) fixes a bug where masonry would create overlapping images on the category pages, (2) moves all JS files into a single folder, (3) allows for easier coding on app.js by creating a variable where $=jQuery, (4) makes the close button on modals easier to press on mobile phones, (5) changes the header image caption so it toggles on click instead of on hover.
+
+**************************************************************
+TABLE OF CONTENTS:
+
+Generic
+Navigation
+Links, anchors
+Text
+
+*************************************************************
+*/
+@charset "UTF-8";
+/* CSS Document */
+
+/***************         Generic stuff that pertains to the every page            *******************/
+*::-moz-selection{
+    background-color: #42842B;
+    color: white;
+}
+
+body *{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+#main{
+	letter-spacing: 2px;
+}
+
+#content{
+	border: solid 3px #298329;
+	margin-top:-20px;
+	padding:2px;
+}
+
+.thumbnail{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.well{
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+hr{
+    border-color: #bcbcbc;
+}
+
+/***************         Navigation            *******************/
+
+a.navbar-brand{
+    padding: 0px;
+    line-height: 50px;
+    text-align: center;
+}
+
+nav.navbar-default{
+	background-color: #366D23;
+	border-radius: 0px 0px 0px 0px;
+	border: solid 3px #42842B;
+	border-bottom:none;
+}
+
+nav.navbar-default li{
+	border-right:solid 2px #4CA32E;
+}
+
+li.open a.dropdown-toggle{
+	background-color: #4CA32E !important;
+}
+
+.dropdown-toggle ul{
+	border:solid #298329 3px;
+}
+
+ul.dropdown-menu a:hover{
+	background-color: #366D23;
+	color: white;
+}
+
+nav.navbar-default li:last-of-type{
+	border:none;
+}
+
+.navbar-inverse .navbar-toggle{
+	border-radius:0px;
+	border-top:none;
+	border-right:none;
+	border-bottom:none;
+	border-left:solid 3px rgba(66,132,43,1.00);
+	height: 50px;
+	margin: 0px 0px 0px 0px;
+}
+
+.navbar-inverse .navbar-toggle:hover{
+	background-color:transparent;
+}
+
+#bars .icon-bar{
+	transition:0.5s;
+}
+
+.anim #b1{
+    transform: rotate(-45deg) translate(-2px, 5px);
+	transition-duration:0.5s;
+}
+
+.anim #b2{
+    opacity: 0;
+	transition-duration:0.5s;
+}
+
+.anim #b3{
+    transform: rotate(45deg) translate(-3px, -6px);
+	transition-duration:0.5s;
+}
+
+/***************         Links, particularly anchor tags            *******************/
+
+a.btn{
+	border-radius: 0px;
+}
+
+a.btn-info{
+	background-color:#42842B;
+	border-color:#42842B;
+}
+
+a.btn-info:hover{
+	background-color:#4CA32E;
+	border-color:#42842B;
+}
+
+a.btn-info:focus, a.btn-info.focus{
+	background-color:#366D23 !important;
+	border-color:#366D23 !important;
+}
+
+a.talk{
+	border:solid 3px #366D23;
+	transition-property:background-color, color;
+	transition-duration:1s;
+	text-align:center;
+	font-size:25px;
+	color:#366D23;
+	padding:10px;
+	margin-right:none;
+	text-decoration:none;
+}
+
+a.talk:hover{
+	transition:1s;
+	background-color: #366D23;
+	text-decoration:none;
+}
+
+.toTop{
+	height: 60px;
+	width: 40px;
+	position:fixed;
+	border: solid #366D23 3px;
+	bottom:100px;
+	right:30px;
+	font-size:33px;
+	text-align:left;
+	line-height:60px;
+	color:#366D23;
+	z-index:1;
+	transition-property:background-color color;
+	transition: 1s;
+}
+
+.toTop:hover{
+	background-color: #366D23;
+	transition:1s;
+}
+
+.hideMe{
+	opacity:0;
+	transition:1s;
+}
+
+/***************         Text boxes, including posts          *******************/
+
+h1.text-center{
+	font-size:60px;
+}
+
+p{
+	font-size: 19px;
+}
+
+address{
+	font-size: 14px;
+}
+
+.modal-header .close{
+	padding: 5px;
+	padding-left: 7px;
+}
+
+
+/**************     Image overlay classes     ****************/
+
+.img-cap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(19, 96, 24, 0.8);
+	color: white;
+	font-size: 15px;
+	overflow: hidden;
+	width: 100;
+	height: 0;
+	transition: .5s ease;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.img-cap ul{
+	list-style: circle;
+}
+
+.img-cap-onclick {
+	height: 30%;
+}
+
+.header-image:hover{
+    cursor: help;
+}
+
+.img-cap:hover{
+    cursor: text;
+}
+
+@media(max-width: 1000px){
+
+	.img-cap-onclick {
+	  height: 55%;
+	}
+}
+
+@media(max-width: 680px){
+
+	.img-cap-onclick {
+	  height: 50%;
+		overflow-y: scroll;
+	}
+}
+
+/***************         POSTS          *******************/
+
+p{
+	line-height: 30px;
+}
+
+.post{
+	display: inline-block;
+	margin: 5px;
+	width: 23%;
+    overflow: hidden;
+    opacity: 1;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px){
+	.post{
+		width: 41%;
+	}
+}
+
+@media (max-width: 444px){
+	.post{
+		width: 90%;
+	}
+}
+
+.post:hover{
+    opacity:0.5;
+}
+
+/***************         Forms          *******************/
+
+label{
+    font-size: 19px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+
+.modal-content{
+	background-color: #f2f2f2;
+}
