@@ -29,6 +29,8 @@ PR Digital Main includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= DEPRECATED - This theme is no longer in use
+
 = 1.0.1 - December 6 2016 =
 * Fixed minor bugs, removed hard-coded links, added customizable fields.
 
